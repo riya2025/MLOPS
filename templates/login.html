@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="static/login.css" rel="stylesheet" />
+    <title>loginpage</title>
+  </head>
+</html>
+<style>
+  #a {
+    text-align: center;
+    background-color: brown;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    margin:220px 520px;
+   }
+   
+   #b{
+    background-color:yellow;
+   }
+   .main{
+    background-color: rgb(190, 134, 1);
+    padding-top: 10px;
+   }
+  button{
+    
+  background-color:rgb(16, 132, 132);
+  border: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  padding:10px;
+  width: 75px;
+  }
+</style>
+
+<body id="a" >
+  <header class="main">
+     <h1 id="b">LOGIN</h1>
+    <form action="/auth" method="POST"> 
+    <input id="c" type="text" placeholder="Enter Username" name="uname" required>
+    <br>
+    <br>
+      <input id="c"type="password" placeholder="Enter Password" name="psw" required>
+     <br>
+     <br>
+    <button class="d" id="c" type="submit" value="Login">Submit</button>
+    {% if error %}
+	  	 <p >{{ error }}</p>
+	  {% endif %}
+      <br>
+      <br>
+      </form>
+ </header>
+  </body>
+</html>
